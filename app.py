@@ -2,6 +2,7 @@ from flask import Flask, Response, render_template
 import cv2
 import signal
 import sys
+import os
 
 app = Flask(__name__)
 
@@ -45,8 +46,6 @@ signal.signal(signal.SIGTERM, cleanup)
 
 #if __name__ == "__main__":
 #    app.run(debug=False, host="0.0.0.0")  # Allow connections from all IPs
-
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
